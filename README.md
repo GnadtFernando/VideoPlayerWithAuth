@@ -37,6 +37,3 @@ docs/#/Videos/get_video__fileName_
 
 ■ (Essa é a url com o stream da câmera que o player deve transmitir, obtida através da
 chamada da Api: /video/{fileName});
-
-Sinta-se à vontade para usar as ferramentas e bibliotecas que você julgar adequadas e que podem agregar
-valor à aplicação.
