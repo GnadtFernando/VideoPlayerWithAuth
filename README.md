@@ -7,6 +7,7 @@ Requisitos
 ○ login contém usuário e senha;
 
 ○ usuário para teste:
+
 ■ usuários: candidato-seventh
 
 ■ senha: 8n5zSrYq
