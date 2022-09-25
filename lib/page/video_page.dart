@@ -13,7 +13,7 @@ class VideoPage extends StatefulWidget {
 }
 
 class _VideoPageState extends State<VideoPage> {
-  // Controller's video
+  // Controller's videoPlayer
   late VideoPlayerController videoPlayerController;
   ChewieController? chewieController;
 
@@ -60,18 +60,29 @@ class _VideoPageState extends State<VideoPage> {
         ),
       ),
       body: !_myVideoController.loadingCompleted
-          ? const Center(
-              child: CircularProgressIndicator(),
+          ? Container(
+              color: Colors.black,
+              width: size.width,
+              height: size.height,
+              child: const Center(child: CircularProgressIndicator()),
             )
           : chewieController != null
-              ? Padding(
-                  padding: EdgeInsets.symmetric(vertical: size.width * 0.1),
-                  child: Chewie(
-                    controller: chewieController!,
+              ? Container(
+                  color: Colors.black,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: size.width * 0.1),
+                    child: Chewie(
+                      controller: chewieController!,
+                    ),
                   ),
                 )
-              : const Center(
-                  child: CircularProgressIndicator(),
+              : Container(
+                  color: Colors.black,
+                  width: size.width,
+                  height: size.height,
+                  child: const Center(
+                    child: CircularProgressIndicator(),
+                  ),
                 ),
     );
   }
